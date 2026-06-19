@@ -13,7 +13,16 @@ A house motion language plus a drop-in component library and a detector.
 - Detector: `fluid/detector/detect.mjs`, a dependency-free scanner for motion and generic-look anti-patterns.
 
 ### `design-system`: identity
-A factory for brand identities. Given a short brief it generates a unique design system in the house DNA: a token file, a Tailwind config, a brand rules doc the agent obeys, a storybook, and a spec. The DNA stays constant, the output is different every time.
+A factory for brand identities. Given a short brief it generates a unique design system in the house DNA: a token file, a Tailwind config, a brand rules doc the agent obeys, a storybook, and a spec. It picks from a curated database (palettes, type pairings, styles) first, then commits. The DNA stays constant, the output is different every time.
+
+### `redesign`: audit and modernize
+Audit an existing site and ship a fresh identity, preserving content, routes, and SEO. Pairs with `design-system` and the detector.
+
+### `brandkit`: brand reference images
+Generate premium reference imagery (logo concepts, palette and type boards, product mockups) for a brand. Works with any image model.
+
+### `output`: execution discipline
+A last gate before shipping: no placeholders, every interactive state handled, the brief honestly met.
 
 ## The pipeline
 
@@ -37,6 +46,9 @@ Each skill is a top-level folder with its own `SKILL.md`. With the `npx skills` 
 ```bash
 npx skills add Darcos-Loft/fluid -s fluid                      # one skill by name
 npx skills add Darcos-Loft/fluid -s design-system
+npx skills add Darcos-Loft/fluid -s redesign
+npx skills add Darcos-Loft/fluid -s brandkit
+npx skills add Darcos-Loft/fluid -s output
 npx skills add github.com/Darcos-Loft/fluid/tree/main/fluid    # by directory URL
 ```
 
