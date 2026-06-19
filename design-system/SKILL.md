@@ -92,6 +92,7 @@ The template carries both, keep the one you use.
 
 ## Reference
 
+- `reference/rules.md`: the hard rules (locks, hero discipline, layout honesty, bans). Read before shipping.
 - `reference/dna.md`: the constant house DNA.
 - `reference/typography.md`: choosing a distinctive type pairing.
 - `reference/color.md`: building a committed palette and the light/dark token map.
