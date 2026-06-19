@@ -22,8 +22,8 @@ The constant across every PLR system (MVP, LeCoffre, PLR, Vigie). These never ch
 ## Identity, not decoration
 - Distinctive, self-hosted type. A display font paired with a body font. Never Inter/Roboto/Arial as the primary (fallbacks are fine).
 - One dominant brand color, one sharp accent, rationed. Tuned near-black, never `#000`.
-- Bespoke SVG icons, drawn by hand, zero decorative emoji. MVP runs a 3-tier icon system: glossy 3D for large elements, duotone gradient-sheen inline (`stroke="currentColor"` + a gradient fill of currentColor, unique id per instance via `useId`), bespoke SVG art for brand marks.
-- A clear surface language: flat, soft shadow, or liquid glass (translucent + inner sheen + soft halo). Pick one per brand and hold it.
+- Bespoke SVG icons, drawn by hand, zero decorative emoji. MVP runs a 3-tier icon system: glossy 3D for large elements, duotone gradient-sheen inline (`stroke="currentColor"` + a gradient fill of currentColor, unique id per instance via `useId`), bespoke SVG art for brand marks. Recipes and code in `icons.md`.
+- A clear surface language: flat, soft shadow, or liquid glass (translucent + inner sheen + soft halo). Pick one per brand and hold it. The glass recipe and the shimmer button are in `glass.md`.
 
 ## Premium is in the details
 - A global `:focus-visible` ring, defined with `:where(...)` so its specificity is 0 and components can still override it. Keyboard accessibility is part of the brand, not an afterthought.

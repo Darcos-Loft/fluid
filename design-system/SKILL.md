@@ -88,4 +88,6 @@ The template carries both, keep the one you use.
 - `reference/dna.md`: the constant house DNA.
 - `reference/typography.md`: choosing a distinctive type pairing.
 - `reference/color.md`: building a committed palette and the light/dark token map.
+- `reference/glass.md`: liquid-glass and surface recipes (the actual CSS, plus the shimmer button and card).
+- `reference/icons.md`: the 3-tier bespoke icon system, with code.
 - `templates/`: `tokens.css`, `tailwind.config.js`, `CLAUDE.md`, `storybook.html`.
