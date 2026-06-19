@@ -36,6 +36,7 @@ A system here is DNA (constant) plus brand (variable). Get both right.
    - One anchor or constraint: an existing logo color, a reference you admire, a competitor you must NOT resemble.
 
 2. Derive the brand variables (commit, do not hedge):
+   - Start from the database: pick a palette from `data/palettes.md`, a type pairing from `data/type-pairings.md`, and a style direction from `data/styles.md` that fit the brief. Adapt the exact values; never improvise a generic default. Two clients in the same sector get different picks.
    - Color: one dominant brand hue + one sharp accent + semantic (success/warn/danger) + tuned neutrals. Never pure black. See `reference/color.md`.
    - Type: a distinctive display font paired with a refined body font, self-hosted. Never Inter/Roboto/Arial as the primary. See `reference/typography.md`.
    - Shape: a radii scale (sharp 4 to 8, rounded 12 to 22, or pill) chosen to match the personality.
@@ -82,6 +83,12 @@ The template carries both, keep the one you use.
 - [ ] `tokens.css` + (`tailwind.config.js`) + `CLAUDE.md` + `storybook.html` + `DESIGN_SYSTEM.md` emitted.
 - [ ] Distinct from the last system produced (different palette and type).
 - [ ] Run the `fluid` detector on the result.
+
+## Database (pick from these first)
+
+- `data/palettes.md`: committed palettes by sector and mood (dominant + accent + neutrals).
+- `data/type-pairings.md`: distinctive display + body + mono pairings, never Inter primary.
+- `data/styles.md`: aesthetic directions with their token tendencies.
 
 ## Reference
 
