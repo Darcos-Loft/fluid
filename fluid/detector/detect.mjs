@@ -68,7 +68,7 @@ for (const file of files) {
   const suppressed = (line, id) => {
     const match = (s, kind) => {
       if (!s) return false;
-      const m = s.match(new RegExp(`fluid-disable-${kind}\\s*([\\w-]*)`));
+      const m = s.match(new RegExp(`fluid-disable-${kind}\\b\\s*([a-zA-Z][\\w-]*)?`));
       return m ? !m[1] || m[1] === id : false;
     };
     return match(lines[line - 2], "next-line") || match(lines[line - 1], "line");
