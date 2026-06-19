@@ -20,29 +20,29 @@ Whenever a task involves movement on a web interface:
 - reviewing a UI for "why does this animation feel off"
 - starting a new site and wanting the motion baseline set correctly
 
-## First decision: should this move at all?
+## First decision: does it deserve motion?
 
-Default to no animation. Add motion only when it earns its place.
+fluid loves motion, used on purpose. Animate what rewards the eye and clarifies the moment; keep instant what the user hits constantly. The aim is fluid, not busy.
 
-Skip it when:
+Let it flow when it is occasional, teaches something, gives feedback, reveals content, or keeps space consistent (a panel returns the way it left). That is most of a marketing site: heroes, reveals, counters, hovers, section transitions.
+
+Keep it instant when:
 - the interaction happens many times a day (menus, list rows, repeated hovers)
 - it is triggered by the keyboard or by a tool the user runs to go fast
 - it adds nothing to clarity, feedback, or spatial understanding
 
-Add it when it is occasional, teaches the user something, gives feedback, or keeps space consistent (a panel returns the way it left).
-
-If you keep one line: frequent means instant, rare means animated.
+If you keep one line: frequent means instant, everything else gets to flow.
 
 ## The rules (apply by default)
 
 Timing
-- Keep UI animations under 300ms. Selects and small popovers around 150 to 200ms.
-- Animate only `transform` and `opacity`. Never animate layout (width, height, top, margin). Never `transition: all`, name the properties.
+- Frequent micro-interactions stay fast: hovers, presses, selects around 150 to 250ms. Reveals, heroes, and ambient motion can run longer (600ms and up) when deliberate.
+- Animate `transform` and `opacity` for anything that moves often (GPU-cheap, smooth). Avoid animating layout (width, height, top, margin), and prefer naming the properties over a blanket `transition: all`.
 
 Easing
 - `ease-out` for almost everything that enters or exits. It feels responsive.
 - `ease-in-out` for elements that move or morph while staying on screen.
-- Avoid `ease-in`, it feels slow.
+- `ease-in` suits exits more than enters; for enters use `ease-out`.
 - `linear` only for marquees, hold-to-confirm, and 3D rotation.
 - Prefer the house signature curves over browser defaults: `--out: cubic-bezier(0.22, 1, 0.36, 1)` for enters, exits, and hovers (the default), `--fr: cubic-bezier(0.27, 0, 0.51, 1)` for on-screen morphs and position changes, `--spring: cubic-bezier(0.34, 1.4, 0.5, 1)` for a gentle overshoot. The `Reveal` component uses a slightly stronger expo variant `cubic-bezier(0.16, 1, 0.3, 1)` for large section reveals. Full set in `reference/easings-and-durations.md`.
 

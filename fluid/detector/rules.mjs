@@ -2,6 +2,8 @@
 // Each rule: { id, severity: 'error'|'warn'|'info', files?: RegExp(pathTest),
 //   pattern?: RegExp(global), scan?: (content, file) => [{index, message?}], message, hint? }
 // Rules split in two halves: MOTION (how it moves) and GENERIC LOOK (how it looks).
+// Philosophy: these flag GENERIC or JANKY motion, never the presence of motion.
+// fluid loves animation. The detector catches the wrong kind, not the act of animating.
 
 const CODE = /\.(css|scss|sass|less|html|htm|jsx|tsx|js|ts|mjs|cjs|vue|svelte|astro)$/i;
 const MARKUP = /\.(html|htm|jsx|tsx|vue|svelte|astro)$/i;
@@ -10,7 +12,7 @@ export const rules = [
   // ---------- MOTION ----------
   {
     id: "transition-all",
-    severity: "warn",
+    severity: "info",
     files: CODE,
     pattern: /transition:\s*all\b|(?<![\w-])transition-all(?![\w-])/g,
     message: "transition: all animates every property, including layout. Name the properties you actually animate.",
@@ -29,7 +31,7 @@ export const rules = [
     severity: "info",
     files: CODE,
     pattern: /\bease-in\b(?!-out)/g,
-    message: "ease-in starts slow and feels unresponsive on enters and exits. Use ease-out (the house --out).",
+    message: "ease-in suits exits more than enters. For enters use ease-out (the house --out).",
     hint: "transition-timing-function: var(--out, cubic-bezier(.22,1,.36,1));",
   },
   {
@@ -51,12 +53,12 @@ export const rules = [
       while ((m = re.exec(content))) {
         const v = parseFloat(m[1]);
         const ms = m[2].toLowerCase() === "s" ? v * 1000 : v;
-        if (ms > 600) out.push({ index: m.index, message: `Animation runs ${ms}ms. Keep UI motion under 300ms (reveals and marquees excepted).` });
+        if (ms > 1200) out.push({ index: m.index, message: `Animation runs ${ms}ms. Fine for a deliberate reveal or ambient loop, sluggish on a frequent interaction.` });
       }
       return out;
     },
-    message: "Long animation duration. Keep UI motion under 300ms; long durations feel sluggish.",
-    hint: "Selects ~180ms, menus and modals 200 to 300ms.",
+    message: "Very long animation. Fine for a deliberate reveal or ambient loop, sluggish on a frequent interaction.",
+    hint: "Micro-interactions ~150 to 250ms; reveals and heroes can run longer.",
   },
   {
     id: "dated-bounce-ease",
