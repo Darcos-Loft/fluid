@@ -1,4 +1,4 @@
-# Craft: anti-generic design skills
+# fluid: anti-generic design skills
 
 A small suite of agent skills for building distinctive, production-grade web interfaces, the opposite of generic "AI slop". The rules and components are extracted from real production work (the MVP fantasy app, LeCoffre, the PLR portfolio, Vigie), not from a template.
 
@@ -23,6 +23,12 @@ design-system     a UNIQUE identity per project        <- kills the generic look
 fluid             signature motion
 detector          a deterministic guardrail
 ```
+
+## Works with everything
+
+**Any agent.** It is a `SKILL.md` skill, so it loads in Claude Code, Cursor, Codex, GitHub Copilot, Gemini CLI, OpenCode, Windsurf, and any harness that reads the skills format. Install with `npx skills add` or copy the folder into the agent's skills directory.
+
+**Any stack.** The design system is pure CSS variables (`tokens.css`), which work in React, Vue, Svelte, Astro, SvelteKit, or plain HTML, with a Tailwind config for Tailwind projects. The motion rules and easing tokens are framework-agnostic CSS; the `fluid` components are React reference implementations, and the same principles (ease-out, spring damping and response, reduced-motion) translate to Vue, Svelte, SwiftUI, and Flutter. The detector scans CSS, SCSS, HTML, JSX/TSX, Vue, Svelte, and Astro.
 
 ## Install
 
