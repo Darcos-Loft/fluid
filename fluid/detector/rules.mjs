@@ -46,7 +46,7 @@ export const rules = [
     files: CODE,
     scan: (content) => {
       const out = [];
-      const re = /\b(?:transition|animation|duration)\b[^;{}\n]*?(\d+(?:\.\d+)?)(ms|s)\b/gi;
+      const re = /\b(?:transition|animation|duration)\b[^;{}\n]*?(?<![\d.])(\d+(?:\.\d+)?|\.\d+)(ms|s)\b/gi;
       let m;
       while ((m = re.exec(content))) {
         const v = parseFloat(m[1]);
