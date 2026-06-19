@@ -45,11 +45,11 @@ A system here is DNA (constant) plus brand (variable). Get both right.
 3. Map to light/dark tokens: decide which tokens invert (bg, surface, text, glass, tints, on-tint) and which hold (brand hues, accent). See `reference/color.md`.
 
 4. Emit the files from `templates/` (fill the `{{placeholders}}`):
-   - `tokens.css` — the source of truth (CSS variables + base classes).
-   - `tailwind.config.js` — same tokens for Tailwind/TanStack sites (omit for CSS-pur projects).
-   - `CLAUDE.md` — the brand rules the agent obeys on every UI task.
-   - `storybook.html` — a live showcase of every token and base component.
-   - `DESIGN_SYSTEM.md` — the human-readable spec.
+   - `tokens.css`: the source of truth (CSS variables + base classes).
+   - `tailwind.config.js`: same tokens for Tailwind/TanStack sites (omit for CSS-pur projects).
+   - `CLAUDE.md`: the brand rules the agent obeys on every UI task.
+   - `storybook.html`: a live showcase of every token and base component.
+   - `DESIGN_SYSTEM.md`: the human-readable spec.
    Put them in a `<project>/design-system/` folder (the LeCoffre pattern).
 
 5. Wire it: load the fonts, import `tokens.css` (or extend Tailwind), and from then on every color/space/radius is `var(--token)`, never a raw value.
@@ -85,7 +85,7 @@ The template carries both, keep the one you use.
 
 ## Reference
 
-- `reference/dna.md` — the constant house DNA.
-- `reference/typography.md` — choosing a distinctive type pairing.
-- `reference/color.md` — building a committed palette and the light/dark token map.
-- `templates/` — `tokens.css`, `tailwind.config.js`, `CLAUDE.md`, `storybook.html`.
+- `reference/dna.md`: the constant house DNA.
+- `reference/typography.md`: choosing a distinctive type pairing.
+- `reference/color.md`: building a committed palette and the light/dark token map.
+- `templates/`: `tokens.css`, `tailwind.config.js`, `CLAUDE.md`, `storybook.html`.

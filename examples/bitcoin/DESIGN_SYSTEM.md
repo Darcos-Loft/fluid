@@ -1,4 +1,4 @@
-# Bitcoin — Design System
+# Bitcoin: Design System
 
 Style: **or numérique**, dark-first, précis, premium. Rigueur d'ingénieur, retenue d'orfèvre. Anti crypto-bro: zéro dégradé violet, zéro néon. Source de vérité = `tokens.css`.
 

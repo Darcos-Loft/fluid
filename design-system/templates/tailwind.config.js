@@ -1,4 +1,4 @@
-// {{BRAND}} — Tailwind config (v3 style). Maps Tailwind utilities to the CSS
+// {{BRAND}}: Tailwind config (v3 style). Maps Tailwind utilities to the CSS
 // variables in tokens.css, so tokens.css stays the single source of truth.
 // Tailwind v4: prefer an @theme block in CSS; the same token names apply.
 /** @type {import('tailwindcss').Config} */

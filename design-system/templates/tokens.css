@@ -1,5 +1,5 @@
 /* ==========================================================================
-   {{BRAND}} — Design Tokens
+   {{BRAND}}: Design Tokens
    Source of truth. Components use var(--token), never a raw value.
    Fill every {{placeholder}}. Keep ONE dark strategy (auto OR toggle).
    ========================================================================== */

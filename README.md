@@ -1,4 +1,4 @@
-# Craft — anti-generic design skills
+# Craft: anti-generic design skills
 
 A small suite of agent skills for building distinctive, production-grade web interfaces, the opposite of generic "AI slop". The rules and components are extracted from real production work (the MVP fantasy app, LeCoffre, the PLR portfolio, Vigie), not from a template.
 
@@ -6,13 +6,13 @@ The idea: an AI can scaffold a UI in seconds, but it converges on the same gener
 
 ## Skills
 
-### `fluid` — motion
+### `fluid`: motion
 A house motion language plus a drop-in component library and a detector.
 - Rules: when to animate at all, easing map, durations, springs, reduced-motion, the details that separate good from great.
 - Components (React 19, framer-motion, lenis, Tailwind): `SmoothScroll`, `ScrollProgress`, `Reveal`, `Odometer`, `AmbientField`, `Marquee`.
 - Detector: `fluid/detector/detect.mjs`, a dependency-free scanner for motion and generic-look anti-patterns.
 
-### `design-system` — identity
+### `design-system`: identity
 A factory for brand identities. Given a short brief it generates a unique design system in the house DNA: a token file, a Tailwind config, a brand rules doc the agent obeys, a storybook, and a spec. The DNA stays constant, the output is different every time.
 
 ## The pipeline

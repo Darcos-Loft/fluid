@@ -12,7 +12,7 @@ node detect.mjs --strict src        # exit 1 on warnings too
 node detect.mjs --include-ui src    # also scan components/ui (shadcn)
 ```
 
-Works with `bun detect.mjs` as well. Exit code is 1 when an `error` is found (or any `warn` under `--strict`), so it can gate CI or feed a Claude Code / Codex hook.
+Works with `bun detect.mjs` as well. Exit code is 1 when an `error` is found (or any `warn` under `--strict`), so it can gate CI or feed an editor hook.
 
 ## What it flags
 

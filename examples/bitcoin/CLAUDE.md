@@ -1,11 +1,11 @@
-# Design System — Bitcoin · Brand rules for generating UI
+# Design System: Bitcoin · Brand rules for generating UI
 
 > This file is the **brand context**. When asked to create a UI, page, component, or mockup
 > for Bitcoin, apply these rules STRICTLY. Use the CSS variables from `tokens.css`. Pair with
 > the `fluid` skill for motion.
 
 ## Identity
-- **Subject**: Bitcoin — sound money, digital gold, the hardest money.
+- **Subject**: Bitcoin: sound money, digital gold, the hardest money.
 - **Personality**: precise, sovereign, premium. Engineering rigor meets a goldsmith's restraint.
 - **Surface language**: soft on light, optional orange-halo glass on dark.
 - **Mode**: light + dark auto, dark is the hero.

@@ -1,11 +1,11 @@
-# Design System — {{BRAND}} · Brand rules for generating UI
+# Design System: {{BRAND}} · Brand rules for generating UI
 
 > This file is the **brand context**. When asked to create a UI, a page, a component, or a
 > mockup, apply these rules STRICTLY. Do not invent colors, fonts, or spacing outside this
 > system. Use the CSS variables from `tokens.css`. Pair with the `fluid` skill for motion.
 
 ## Identity
-- **Product**: {{BRAND}} — {{ONE_LINE_POSITIONING}}.
+- **Product**: {{BRAND}}: {{ONE_LINE_POSITIONING}}.
 - **Personality**: {{PERSONALITY}} (e.g. refined, editorial, techy, playful).
 - **Surface language**: {{flat | soft | glass}}.
 - **Language**: {{fr | en}} by default, sentence case.
@@ -36,7 +36,7 @@
 - Avoid: hard shadows, generic fonts, off-palette colors, pure black, the purple gradient, emoji.
 
 ## Files
-- `tokens.css` — variables + base classes
-- `tailwind.config.js` — Tailwind equivalent
-- `storybook.html` — live showcase
-- `DESIGN_SYSTEM.md` — detailed spec
+- `tokens.css`: variables + base classes
+- `tailwind.config.js`: Tailwind equivalent
+- `storybook.html`: live showcase
+- `DESIGN_SYSTEM.md`: detailed spec

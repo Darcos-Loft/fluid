@@ -1,4 +1,4 @@
-// Bitcoin — Tailwind config. Maps utilities to the CSS variables in tokens.css,
+// Bitcoin: Tailwind config. Maps utilities to the CSS variables in tokens.css,
 // so tokens.css stays the single source of truth. Tailwind v4: use an @theme block.
 /** @type {import('tailwindcss').Config} */
 export default {
