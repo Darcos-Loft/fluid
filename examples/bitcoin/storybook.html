@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bitcoin — Design System</title>
+  <link rel="stylesheet" href="./tokens.css" />
+  <style>
+    body { margin: 0; padding: var(--space-12) var(--space-8); }
+    .wrap { max-width: 1000px; margin-inline: auto; display: flex; flex-direction: column; gap: var(--space-12); }
+    .eyebrow { font-family: var(--font-mono); font-size: var(--fs-xs); letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-secondary); }
+    h1 { font-size: var(--fs-hero); }
+    h2 { font-size: var(--fs-xl); margin-bottom: var(--space-5); }
+    .muted { color: var(--text-secondary); }
+    .grid { display: flex; flex-wrap: wrap; gap: var(--space-4); align-items: center; }
+    .swatch { width: 96px; height: 96px; border-radius: var(--radius-card); border: 1px solid var(--separator); display: flex; align-items: flex-end; padding: 8px; font-size: 11px; font-family: var(--font-mono); }
+    .scale > * { font-family: var(--font-display); letter-spacing: -0.02em; margin-bottom: var(--space-2); }
+    .price { font-size: var(--fs-hero); }
+    .price .unit { color: var(--text-secondary); font-size: var(--fs-xl); }
+    .toggle { position: fixed; top: 16px; right: 16px; }
+    .hr { height: 1px; background: var(--separator); border: 0; }
+    a.btn { color-scheme: only; }
+  </style>
+</head>
+<body>
+  <button class="btn btn--outline toggle" onclick="document.documentElement.setAttribute('data-theme', document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark')">Thème</button>
+  <div class="wrap">
+
+    <header style="display:flex; flex-direction:column; gap:var(--space-4)">
+      <span class="eyebrow">Design System</span>
+      <h1><span class="btc-mark">₿</span> Bitcoin</h1>
+      <p class="muted" style="max-width:48ch">Sound money, or numérique. Précis, souverain, premium. Cabinet Grotesk + Satoshi + JetBrains Mono.</p>
+    </header>
+
+    <hr class="hr" />
+
+    <section>
+      <h2>Le chiffre, en mono tabulaire</h2>
+      <div class="price num">64 280<span class="unit"> $ / ₿</span></div>
+      <p class="muted num" style="font-size:var(--fs-sm)">bc1q xy2k gdyg j4x ... &nbsp; bloc 842 119 &nbsp; <span style="color:var(--success-text)">confirmé</span></p>
+    </section>
+
+    <section>
+      <h2>Couleurs</h2>
+      <div class="grid">
+        <div class="swatch" style="background:var(--brand); color:#18120a">brand</div>
+        <div class="swatch" style="background:var(--accent); color:#08120e">accent</div>
+        <div class="swatch" style="background:var(--gold); color:#1a1408">gold</div>
+        <div class="swatch" style="background:var(--danger); color:#fff">danger</div>
+        <div class="swatch" style="background:var(--surface); color:var(--text)">surface</div>
+        <div class="swatch" style="background:var(--bg-base); color:var(--text)">base</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Typographie</h2>
+      <div class="scale">
+        <div style="font-size:var(--fs-5xl)">Don't trust, verify</div>
+        <div style="font-size:var(--fs-2xl)" class="muted">21 millions, jamais un de plus</div>
+        <p style="font-family:var(--font-body); font-size:var(--fs-base); max-width:54ch" class="muted">Corps en Satoshi. Une monnaie dont personne ne contrôle l'émission, vérifiable par chacun, transférable partout. Le renard brun rapide saute par dessus le chien.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Boutons</h2>
+      <div class="grid">
+        <a class="btn btn--primary">Acheter du Bitcoin</a>
+        <a class="btn btn--outline">Voir le registre</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Carte transaction</h2>
+      <div class="card" style="max-width:380px">
+        <div style="display:flex; justify-content:space-between; align-items:center">
+          <span class="badge badge--confirmed">● confirmé</span>
+          <span class="num muted" style="font-size:var(--fs-sm)">il y a 2 min</span>
+        </div>
+        <div class="num" style="font-size:var(--fs-3xl)">+0,025 <span class="muted" style="font-size:var(--fs-lg)">₿</span></div>
+        <p class="muted num" style="margin:0; font-size:var(--fs-sm)">de bc1q a2f8 ... 9d3c</p>
+        <a class="btn btn--primary" style="align-self:flex-start">Détails</a>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
