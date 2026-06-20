@@ -166,6 +166,30 @@ export const rules = [
     message: "Generic SaaS buzzword. Say the specific thing the product does.",
     hint: "Replace 'supercharge your workflow' with the concrete benefit.",
   },
+  {
+    id: "numbered-section-markers",
+    severity: "info",
+    files: CODE,
+    pattern: /(?<![\w.#-])0\d\s*(?:·|\/|\.)\s*[A-Za-z]/g,
+    message: "Zero-padded section numbers (01, 02, 00 / INDEX) used as eyebrows are a generated-layout tell. Let the section titles carry themselves.",
+    hint: "Drop the 01 / 02 markers, or keep them only where a real sequence matters.",
+  },
+  {
+    id: "hero-eyebrow-chip",
+    severity: "info",
+    files: MARKUP,
+    pattern: /class="[^"]*\b(?:eyebrow|kicker|overline)\b[^"]*"[^>]*>[^<]{1,48}<\/[a-z]+>\s*<h1/gi,
+    message: "A small label sitting right above the h1 (the eyebrow or kicker chip) is the default AI hero. Fold it into the headline or drop it.",
+    hint: "Integrate the kicker into the headline, or run it as a breadcrumb in the nav.",
+  },
+  {
+    id: "oversized-type",
+    severity: "info",
+    files: CODE,
+    pattern: /font-size:\s*(?:1[2-9]\d|[2-9]\d\d)px/gi,
+    message: "A fixed font-size of 120px or more does not scale. Use a responsive clamp() so the hero holds on every screen.",
+    hint: "font-size: clamp(40px, 6vw, 76px);",
+  },
 ];
 
 export const projectRules = [
