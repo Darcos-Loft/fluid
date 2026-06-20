@@ -1,10 +1,18 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="fluid, production-grade UI for AI agents, minus the slop" width="100%">
+  <a href="https://fluid.plrstudio.fr">
+    <img src="assets/banner.svg" alt="fluid, production-grade UI for AI agents, minus the slop" width="100%">
+  </a>
 </p>
 
 <p align="center">
   <b>6 skills, 108 palettes, 53 styles, 14 layouts, a 22-rule detector, and one house motion language.</b><br>
   Agent skills that build distinctive, production-grade web interfaces, the opposite of generic AI slop.
+</p>
+
+<p align="center">
+  <a href="https://fluid.plrstudio.fr"><b>Live showcase</b></a> ·
+  <a href="https://fluid.plrstudio.fr/docs">Docs</a> ·
+  <a href="https://www.npmjs.com/package/fluid-skills">npm</a>
 </p>
 
 <p align="center">
