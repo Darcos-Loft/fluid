@@ -7,12 +7,19 @@ A deterministic, dependency-free scanner for the anti-patterns in `../reference/
 ```bash
 node detect.mjs <paths...>          # scan files or folders
 node detect.mjs src                 # a folder
+node detect.mjs --deep src          # add the jsdom DOM pass
 node detect.mjs --json src          # machine output for CI
 node detect.mjs --strict src        # exit 1 on warnings too
 node detect.mjs --include-ui src    # also scan components/ui (shadcn)
 ```
 
-Works with `bun detect.mjs` as well. Exit code is 1 when an `error` is found (or any `warn` under `--strict`), so it can gate CI or feed an editor hook.
+Works with `bun detect.mjs` as well, and through the CLI as `npx fluid-skills detect <path>`. Exit code is 1 when an `error` is found (or any `warn` under `--strict`), so it can gate CI or feed an editor hook.
+
+## Architecture
+
+- `rules.mjs`, the 22 regex rules (zero dependency). The seed of the house ruleset.
+- `core.mjs`, the importable scan engine shared by `detect.mjs` and the CLI.
+- `deep.mjs`, the optional Tier 3 pass: 6 DOM-aware rules over jsdom (heading order, multiple `h1`, nested cards, icon-tile grids, line length, best-effort contrast). Loaded only with `--deep`, so the core never imports jsdom. jsdom does no layout, so structural rules are exact and contrast is best-effort (literal colors only).
 
 ## What it flags
 
