@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="fluid — production-grade UI for AI agents, minus the slop" width="100%">
+  <img src="assets/banner.svg" alt="fluid, production-grade UI for AI agents, minus the slop" width="100%">
 </p>
 
 <p align="center">
@@ -15,9 +15,10 @@
 </p>
 
 <p align="center">
+  <img alt="npm" src="https://img.shields.io/npm/v/fluid-skills?style=flat-square&logo=npm&color=7aa2ff">
+  <img alt="downloads" src="https://img.shields.io/npm/dm/fluid-skills?style=flat-square&color=5ad1c8&label=downloads">
   <img alt="Latest release" src="https://img.shields.io/github/v/release/Darcos-Loft/fluid?style=flat-square&color=7aa2ff">
   <img alt="Stars" src="https://img.shields.io/github/stars/Darcos-Loft/fluid?style=flat-square&logo=github">
-  <img alt="Last commit" src="https://img.shields.io/github/last-commit/Darcos-Loft/fluid?style=flat-square&color=5ad1c8">
 </p>
 
 ---
@@ -29,10 +30,12 @@ The rules and components are distilled from real production work, not from a sta
 ## Quick start
 
 ```bash
-npx skills add Darcos-Loft/fluid
+npx fluid-skills install
 ```
 
-Then tell your agent what to build. It loads the right skill on its own: `design-system` to set an identity, `fluid` for motion, the detector to check itself before calling anything done.
+It detects your agent (Claude Code, Cursor, Copilot, Codex, Gemini, Windsurf, OpenCode) and drops the six skills in. Then tell your agent what to build: it loads the right skill on its own, `design-system` to set an identity, `fluid` for motion, the detector to check itself before calling anything done.
+
+Prefer the skills registry? `npx skills add Darcos-Loft/fluid` works too.
 
 ## Why fluid
 
@@ -80,20 +83,35 @@ Plus a motion-preset library in the house easings. The lesson behind it: varying
 
 ## The detector
 
-A deterministic, dependency-free scanner for the anti-patterns the rest of the suite teaches. No API calls: it greps source for motion and generic-look smells, with line numbers, severity, and a fix hint.
+A deterministic scanner for the anti-patterns the rest of the suite teaches. No API calls, no model: it reads source for motion and generic-look smells, with line numbers, severity, and a fix hint.
 
 ```bash
-node fluid/detector/detect.mjs <path>            # audit a folder or file
-node fluid/detector/detect.mjs --strict <path>   # exit 1 on warnings (CI)
-node fluid/detector/detect.mjs --json <path>     # machine output
+npx fluid-skills detect <path>           # audit a folder or file
+npx fluid-skills detect <path> --deep    # add the DOM pass (jsdom)
+npx fluid-skills detect <path> --strict  # exit 1 on warnings (CI)
+npx fluid-skills detect <path> --json    # machine output
 ```
 
-**22 rules** across two families:
+**22 regex rules**, zero dependencies, across two families:
 
 - **Motion smells:** `transition: all`, animating layout properties, `ease-in` on enters, `scale(0)`, long durations, dated bounce eases, plus a project-level check for a missing `prefers-reduced-motion` path.
 - **Generic-look tells:** Inter/Roboto/Arial as a primary font, the cliche purple gradient, pure black, emoji used as icons, template components (Aceternity/Magic UI/21st) shipped verbatim, Space Grotesk overuse, gradient text, justified body, tiny text, em-dash typography, crushed tracking, marketing buzzwords, numbered section markers, the hero eyebrow chip, oversized type.
 
-Suppress a line with `fluid-disable-line`, configure with `fluid.config.json`. Rules live in `fluid/detector/rules.mjs` as a plain array, extend them as your house ruleset grows. Exit code is 1 on an error (or any warning under `--strict`), so it gates CI or feeds an editor hook.
+**`--deep` adds 6 DOM-aware rules** the regex pass cannot see (via jsdom, opt-in so the core stays dependency-free): heading-order skips, multiple `h1`, cards nested in cards, repeated icon-tile feature grids, unbounded line length, and a best-effort contrast check on literal colors.
+
+Suppress a line with `fluid-disable-line`, configure with `fluid.config.json`. Rules live in `fluid/detector/rules.mjs` (and `deep.mjs`) as plain arrays, extend them as your house ruleset grows. Exit code is 1 on an error (or any warning under `--strict`), so it gates CI. No npm? `node fluid/detector/detect.mjs <path>` runs the same engine.
+
+## The CLI
+
+One command, three jobs. Published as [`fluid-skills`](https://www.npmjs.com/package/fluid-skills) on npm, so nothing to clone.
+
+```bash
+npx fluid-skills install    # drop the 6 skills into your agent (auto-detected)
+npx fluid-skills detect .   # lint a project for AI-slop tells
+npx fluid-skills hooks      # run the detector on every edit in Claude Code
+```
+
+`install` detects the agents present in your project and copies the skills into each. `hooks` wires the detector into Claude Code as a non-blocking edit hook, so the slop tells surface the moment you write them, not at review time.
 
 ## The pipeline
 

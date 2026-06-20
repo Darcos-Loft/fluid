@@ -1,6 +1,10 @@
 # Changelog
 
-## 0.2.0 — 2026-06-20
+## 0.3.0 (2026-06-20)
+- **A CLI, `fluid-skills`, published to npm.** `npx fluid-skills install` detects the agents in a project (Claude Code, Cursor, Copilot, Codex, Gemini, Windsurf, OpenCode) and drops the six skills into each. `npx fluid-skills detect <path>` runs the detector with no clone. `npx fluid-skills hooks` wires the detector into Claude Code as a non-blocking edit hook, so slop tells surface as you write them.
+- **Detector Tier 3, `--deep`.** An optional jsdom pass adds 6 DOM-aware rules the regex core cannot see: heading-order skips, multiple `h1`, cards nested in cards, repeated icon-tile feature grids, unbounded line length, and a best-effort contrast check on literal colors. The regex core stays zero-dependency; jsdom is loaded only when `--deep` is asked for. The detector core was extracted to `core.mjs` so the script and the CLI share one engine.
+
+## 0.2.0 (2026-06-20)
 - docs: a hero banner (`assets/banner.svg`) in the house aqua and periwinkle, a countable one-line pitch, two-tier badges, a "What's new" block, and a star-history chart. The README now reads as a maintained product, not a folder.
 - docs: README rewritten around the suite as it stands now, quick start first, the six skills as a scan table, the database as a numbers table (108 palettes, 57 type pairings, 53 styles, 14 layouts, 32 chart types, 10 tech stacks), the 22-rule detector, badges.
 - New skills in the family: `redesign` (audit an existing site and modernize), `brandkit` (premium brand reference images), `refine` (a shared vocabulary of named refine commands), `output` (execution discipline, the last gate before shipping).

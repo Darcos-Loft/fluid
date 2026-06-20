@@ -1,0 +1,62 @@
+{
+  "name": "fluid-skills",
+  "version": "0.3.0",
+  "description": "Anti-generic design skills for AI agents: a committed identity, a house motion language, and a deterministic detector. Install the skills into any agent and lint your UI for AI-slop tells.",
+  "type": "module",
+  "bin": {
+    "fluid-skills": "cli/index.mjs",
+    "fluid": "cli/index.mjs"
+  },
+  "files": [
+    "cli",
+    "fluid",
+    "design-system",
+    "redesign",
+    "brandkit",
+    "refine",
+    "output",
+    "examples",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "detect": "node fluid/detector/detect.mjs",
+    "detect:deep": "node fluid/detector/detect.mjs --deep"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "jsdom": "^24.1.3"
+  },
+  "keywords": [
+    "design",
+    "design-system",
+    "ui",
+    "ux",
+    "motion",
+    "animation",
+    "ai",
+    "agent",
+    "skill",
+    "claude",
+    "cursor",
+    "copilot",
+    "linter",
+    "detector",
+    "anti-patterns",
+    "tailwind",
+    "frontend"
+  ],
+  "homepage": "https://github.com/Darcos-Loft/fluid#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Darcos-Loft/fluid.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Darcos-Loft/fluid/issues"
+  },
+  "author": "Paul Rolland (PLR Studio)",
+  "license": "MIT"
+}
