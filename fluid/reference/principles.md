@@ -1,8 +1,8 @@
 # Principles, condensed to rules
 
-## From Apple "Designing Fluid Interfaces" (WWDC 2018)
+## Fluid interface principles
 
-A fluid interface feels like an extension of the user's mind and body. Eight principles, restated as rules:
+A fluid interface feels like an extension of the user's mind and body. Eight principles, as rules:
 
 1. Response: respond instantly to every input. Hunt down and remove latency and timers. Delay breaks the feeling of connection.
 2. Redirectable: let the user change their mind mid-gesture. Gestures should be interruptible and reversible at any point.
@@ -15,7 +15,7 @@ A fluid interface feels like an extension of the user's mind and body. Eight pri
 
 Spring model: control damping (overshoot) and response (how fast it reaches target). Never think in duration. Default to 100 percent damping (no overshoot); add bounce only when the gesture had momentum.
 
-## From Emil Kowalski (animations.dev)
+## When not to animate
 
 You often do not need animation:
 - Do not animate high-frequency interactions (menus opened hundreds of times a day, keyboard actions, repeated hovers). Instant is better.
@@ -34,7 +34,7 @@ Developing taste: surround yourself with great work, rationalize why something w
 
 ## House synthesis
 
-The two sources agree: motion is a tool, not a flourish. Decide if it should move first. When it moves, make it fast, responsive, physical, interruptible, spatially honest, and always with a reduced-motion path. Ration the brand: a 2px gradient hairline beats a full-screen light show.
+It all points one way: motion is a tool, not a flourish. Decide if it should move first. When it moves, make it fast, responsive, physical, interruptible, spatially honest, and always with a reduced-motion path. Ration the brand: a 2px gradient hairline beats a full-screen light show.
 
 ## Interaction craft (from production)
 

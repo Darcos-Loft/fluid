@@ -8,7 +8,7 @@ license: MIT
 
 Motion that feels like an extension of the user, not decoration. This skill is a house motion language: a small set of rules that decide whether to animate and how, plus a library of components that already follow them.
 
-The rules distill three sources into one: Apple "Designing Fluid Interfaces" (WWDC 2018), Emil Kowalski (animations.dev), and our own production sites.
+The rules are distilled from years of our own production sites into one house motion language.
 
 > House craft bar: the finish reference is plrstudio.fr. Motion stays restrained and serves the content (Swiss craft, the motion only accompanies). The differentiator is the quality of each detail, not the count of effects. When in doubt, do less, and make what remains feel inevitable: signature easings, spring micro-interactions, custom SVG over stock icons, a rationed brand accent.
 
@@ -96,5 +96,5 @@ It flags the motion smells above (`transition: all`, layout animation, `ease-in`
 ## Reference (load when needed)
 
 - `reference/easings-and-durations.md`: the full easing map, custom curves, duration table.
-- `reference/principles.md`: Apple fluid-interface principles and Emil's tips, condensed to rules.
+- `reference/principles.md`: the motion principles behind the rules, condensed.
 - `reference/anti-patterns.md`: the review checklist. Seed of a future deterministic detector.
