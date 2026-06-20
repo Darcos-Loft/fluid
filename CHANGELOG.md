@@ -1,6 +1,7 @@
 # Changelog
 
-## Unreleased
+## 0.2.0 — 2026-06-20
+- docs: a hero banner (`assets/banner.svg`) in the house aqua and periwinkle, a countable one-line pitch, two-tier badges, a "What's new" block, and a star-history chart. The README now reads as a maintained product, not a folder.
 - docs: README rewritten around the suite as it stands now, quick start first, the six skills as a scan table, the database as a numbers table (108 palettes, 57 type pairings, 53 styles, 14 layouts, 32 chart types, 10 tech stacks), the 22-rule detector, badges.
 - New skills in the family: `redesign` (audit an existing site and modernize), `brandkit` (premium brand reference images), `refine` (a shared vocabulary of named refine commands), `output` (execution discipline, the last gate before shipping).
 - refine: 20 named moves (`typeset`, `colorize`, `animate`, `settle`, `flow`, `bolder`, `quieter`, `distill`, `regroup`, `glass`, `iconify`, `deslop`, `brandward`, `productward`, `audit`, `critique`, `harden`, `polish`, `tone`, `recase`), each wired to an existing rule, palette/type database, the detector, or the output gate. `reference/commands.md` defines what each enforces and leaves alone.
