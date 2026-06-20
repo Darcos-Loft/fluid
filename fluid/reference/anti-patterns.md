@@ -38,3 +38,33 @@ Review motion against this before shipping. Each item is a candidate for a futur
 - [ ] A modal or overlay unmounted as a side-effect of an unrelated state (a counter, a fetch). Drive its visibility from its own intent.
 - [ ] A global click listener (spark, outside-dismiss) attached in the bubble phase, swallowed by a modal's `stopPropagation`. Use the capture phase.
 - [ ] Reduced motion handled in CSS only or JS only. Do both.
+
+## Catalog: tells to review by hand
+The detector catches the deterministic ones. These are structural or semantic, so review them by eye (inspired by the impeccable slop catalog).
+
+Typography and hierarchy
+- [ ] Flat type hierarchy: heading and body sizes too close. Make the jump obvious.
+- [ ] An icon tile (rounded square) stacked above every heading. Drop it.
+- [ ] Repeated uppercase kicker labels on every section. Use them once, if at all.
+- [ ] All-caps body text. Reserve caps for short labels.
+- [ ] A skipped heading level (h1 then h3). Keep the order.
+
+Layout
+- [ ] Identical card grids: three or four same-size icon-heading-text cards. Vary the sizes and the grid.
+- [ ] Cards nested inside cards inside cards. Flatten.
+- [ ] Numbered section markers (01 / 02 / 03) as decoration.
+- [ ] The hero-metric block: a big number, a small label, three stats, a gradient accent.
+- [ ] A long list with a border on every row, where a table or a filter is the right component.
+- [ ] Lines longer than ~75 characters. Constrain the measure.
+
+Color and surface
+- [ ] The cream-beige "tasteful" default surface, used because it reads safe. Commit to a real palette.
+- [ ] Gray text on a colored background (low contrast). Check 4.5:1.
+- [ ] Glass or blur used decoratively rather than to signal depth or dismissal.
+
+Copy
+- [ ] Aphoristic manufactured contrast ("not X, but Y") on repeat.
+- [ ] Calling things "performative" or "theater" as a tic.
+
+Register
+- [ ] A landing page and a dashboard treated the same. Brand work (impression-led) and product UI (task-led) play by different rules.
