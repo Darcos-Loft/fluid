@@ -13,7 +13,7 @@ A house motion language plus a drop-in component library and a detector.
 - Detector: `fluid/detector/detect.mjs`, a dependency-free scanner for motion and generic-look anti-patterns.
 
 ### `design-system`: identity
-A factory for brand identities. Given a short brief it generates a unique design system in the house DNA: a token file, a Tailwind config, a brand rules doc the agent obeys, a storybook, and a spec. It picks from a curated database (palettes, type pairings, styles) first, then commits. The DNA stays constant, the output is different every time.
+A factory for brand identities. Given a short brief it generates a unique design system in the house DNA: a token file, a Tailwind config, a brand rules doc the agent obeys, a storybook, and a spec. It picks from a large curated database first, then commits: 100+ committed palettes, 50+ type pairings, 25 style directions, plus motion-preset and chart-type libraries. The DNA stays constant, the output is different every time.
 
 ### `redesign`: audit and modernize
 Audit an existing site and ship a fresh identity, preserving content, routes, and SEO. Pairs with `design-system` and the detector.

@@ -36,7 +36,7 @@ A system here is DNA (constant) plus brand (variable). Get both right.
    - One anchor or constraint: an existing logo color, a reference you admire, a competitor you must NOT resemble.
 
 2. Derive the brand variables (commit, do not hedge):
-   - Start from the database: pick a palette from `data/palettes.md`, a type pairing from `data/type-pairings.md`, and a style direction from `data/styles.md` that fit the brief. Adapt the exact values; never improvise a generic default. Two clients in the same sector get different picks.
+   - Start from the database: pick a palette from `data/palettes.md` (100+ committed palettes), a type pairing from `data/type-pairings.md` (50+ distinctive pairings), and a style direction from `data/styles.md` that fit the brief. Adapt the exact values; never improvise a generic default. Two clients in the same sector get different picks. For motion reach into `data/motion-presets.md`, for any data display into `data/chart-types.md`.
    - Color: one dominant brand hue + one sharp accent + semantic (success/warn/danger) + tuned neutrals. Never pure black. See `reference/color.md`.
    - Type: a distinctive display font paired with a refined body font, self-hosted. Never Inter/Roboto/Arial as the primary. See `reference/typography.md`.
    - Shape: a radii scale (sharp 4 to 8, rounded 12 to 22, or pill) chosen to match the personality.
@@ -86,9 +86,11 @@ The template carries both, keep the one you use.
 
 ## Database (pick from these first)
 
-- `data/palettes.md`: committed palettes by sector and mood (dominant + accent + neutrals).
-- `data/type-pairings.md`: distinctive display + body + mono pairings, never Inter primary.
-- `data/styles.md`: aesthetic directions with their token tendencies.
+- `data/palettes.md`: 100+ committed palettes by sector and mood (dominant + accent + neutrals).
+- `data/type-pairings.md`: 50+ distinctive display + body + mono pairings, never Inter primary.
+- `data/styles.md`: 25 aesthetic directions with their token tendencies.
+- `data/motion-presets.md`: ready-to-use motion recipes in the house easings (reveals, hovers, press, overlays, ambient).
+- `data/chart-types.md`: which chart for which question, with house data-viz defaults.
 
 ## Reference
 

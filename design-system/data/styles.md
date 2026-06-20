@@ -27,6 +27,28 @@ Format: name — when. surface · radii · motion · signature.
 - **Dark gold (lacquer)** — premium nocturnal, fintech, luxury. surface near-black + a metallic accent + subtle texture · radii 10 to 18px · motion smooth, restrained · signature: gold or amber on tuned near-black, champagne text, a sense of weight.
 - **Dark techy** — dev tools, infra, crypto. surface near-black + a single vivid cool accent · radii 8 to 14px · motion precise, fast · signature: mono labels, glowing accent rationed, terminal-adjacent confidence (never neon-everything).
 
+## Expressive / statement-led
+- **Editorial maximalism** — bold brand, fashion, culture. surface flat, layered type and image · radii 0 to 8px · motion staggered expressive reveals · signature: huge mixed-size headlines, overlap, a strong point of view, image-led. The disciplined opposite of slop: maximal but intentional.
+- **Retro-futurism / Y2K** — nostalgic tech, music, youth. surface chrome and gradient highlights · radii 8 to 20px · motion glossy, rationed · signature: chrome type, holographic accent, mono or pixel cues. Keep one nostalgic move, not all of them.
+- **Art deco / geometric luxe** — heritage glam, spirits, events. surface flat with metallic linework · radii 0 to 8px · motion elegant, slow · signature: symmetry, gold hairline motifs (fans, sunbursts), high contrast, a display serif.
+- **Organic blob / soft shapes** — friendly modern, consumer, kids-adjacent. surface flat with blob masks and soft shapes · radii organic · motion gentle morphing · signature: rounded organic forms, a soft committed palette, approachable without being childish.
+
+## Material / depth-led (more)
+- **Aurora / gradient mesh** — modern hero, AI, music, done right. surface a soft drifting mesh-gradient halo behind flat, legible content · radii 12 to 20px · motion slow drifting blobs (reduced-motion freezes them) · signature: an ambient colored field is the only flourish; content stays flat and readable. Commit to a non-purple palette so it does not read as default AI.
+- **Claymorphism** — playful apps, kids, games. surface inflated soft inner and outer shadows · radii 20 to 32px · motion bouncy but gentle · signature: puffy pastel shapes, tactile, delight. Keep type clean to balance.
+- **Neumorphism** — accents only, never whole UI. surface same-color extruded soft shadows · radii 14 to 24px · motion subtle · signature: monochrome tactile. Warning: low contrast by nature, fails accessibility for text and primary controls; use for a toggle or a card detail, not the interface.
+
+## Structure / raw-led (more)
+- **Neo-brutalist** — playful-bold brands, indie products. surface flat with hard offset shadows (`4px 4px 0`) · radii 0 to 6px · motion snappy, no fancy easing · signature: thick black borders, bright flat fills, sticker energy. Brutalist's fun cousin, not its austere one.
+- **Editorial grid / magazine** — publishing, portfolios, agencies. surface flat with visible columns and hairline rules · radii 0 to 6px · motion minimal · signature: multi-column layout, captions, asymmetric balance, a strong baseline grid.
+- **Monospace / technical** — dev tools, data, security. surface flat with grid lines · radii 2 to 8px · motion precise and fast · signature: a mono display or labels, tabular numbers, terminal cues, color rationed hard.
+
+## Dark / premium-led (more)
+- **Cinematic dark** — entertainment, media, film, launches. surface deep dark with full-bleed imagery · radii 8 to 16px · motion smooth fades, parallax rationed · signature: media bleeds edge to edge, dramatic contrast, light comes from the content, UI recedes.
+
+## Accessibility-led
+- **High-contrast clear** — civic, gov, healthcare, a11y-first brands. surface flat with strong borders · radii 6 to 12px · motion minimal, reduced-motion as the baseline · signature: AAA contrast, large hit targets, an unmissable focus ring, no ambiguity. Constraint as an aesthetic, and the safest default when the audience is broad.
+
 ## Picking and holding
 - One surface language, one radii scale, one accent across the whole system. No mid-page shifts.
 - The style sets the tendencies; the palette and type pairing make it specific. Two clients can share a style but must differ in palette and type.
