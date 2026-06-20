@@ -40,7 +40,7 @@ Review motion against this before shipping. Each item is a candidate for a futur
 - [ ] Reduced motion handled in CSS only or JS only. Do both.
 
 ## Catalog: tells to review by hand
-The detector catches the deterministic ones. These are structural or semantic, so review them by eye (inspired by the impeccable slop catalog).
+The detector catches the deterministic ones. These are structural or semantic, so review them by eye.
 
 Typography and hierarchy
 - [ ] Flat type hierarchy: heading and body sizes too close. Make the jump obvious.

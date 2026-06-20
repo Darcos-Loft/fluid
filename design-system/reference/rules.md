@@ -1,6 +1,6 @@
 # Hard rules: locks and bans
 
-Non-negotiable rules that keep output from looking templated. The locks enforce consistency, the discipline keeps structure honest, the bans kill the specific tells of generated UI. Distilled from production and from the anti-slop work of tasteskill.dev and impeccable.style.
+Non-negotiable rules that keep output from looking templated. The locks enforce consistency, the discipline keeps structure honest, the bans kill the specific tells of generated UI. Distilled from real production work.
 
 ## The locks (consistency)
 - Color lock: one accent across the whole page. No mid-page color shifts.
