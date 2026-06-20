@@ -21,6 +21,9 @@ Audit an existing site and ship a fresh identity, preserving content, routes, an
 ### `brandkit`: brand reference images
 Generate premium reference imagery (logo concepts, palette and type boards, product mockups) for a brand. Works with any image model.
 
+### `refine`: the verb layer
+A shared vocabulary of named refine commands you run on UI that already exists: `typeset`, `colorize`, `animate`, `settle`, `flow`, `bolder`, `quieter`, `distill`, `regroup`, `glass`, `iconify`, `deslop`, `brandward`, `productward`, `audit`, `critique`, `harden`, `polish`. Each is one scoped move wired to the rest of the suite, so "make it better" becomes precise and repeatable.
+
 ### `output`: execution discipline
 A last gate before shipping: no placeholders, every interactive state handled, the brief honestly met.
 
@@ -48,6 +51,7 @@ npx skills add Darcos-Loft/fluid -s fluid                      # one skill by na
 npx skills add Darcos-Loft/fluid -s design-system
 npx skills add Darcos-Loft/fluid -s redesign
 npx skills add Darcos-Loft/fluid -s brandkit
+npx skills add Darcos-Loft/fluid -s refine
 npx skills add Darcos-Loft/fluid -s output
 npx skills add github.com/Darcos-Loft/fluid/tree/main/fluid    # by directory URL
 ```
