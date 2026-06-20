@@ -15,8 +15,11 @@ Non-negotiable rules that keep output from looking templated. The locks enforce 
 - Navigation: a single line, height under 80px.
 
 ## Layout honesty
+- Pick the page shape from `data/layouts.md`, the same way you pick a palette. Commit to one archetype per page, and vary it across pages so two never share a silhouette. Varying the palette is not enough, generated pages converge on the same shape.
 - Section variety: across a long page, use at least 4 different layout families. Do not repeat the same hero-then-three-cards block.
 - No three-equal-card rows as the default. Vary sizes, vary the grid.
+- Use the viewport. Do not center a narrow column on a wide screen with empty sides. Let visual-heavy sections (galleries, image heroes, bento) run wide or full-bleed. Keep running text in a readable measure (around 60ch), not a narrow centered lane.
+- One real photo where it earns its place, the rest built in CSS and SVG. A photo in every slot makes distinct brands look the same.
 - Bento and grids: N items fill N cells exactly. No empty decorative cells.
 - Long lists are a different component (a table, a filter), not a longer list with a border on every row.
 
