@@ -45,6 +45,8 @@ It detects your agent (Claude Code, Cursor, Copilot, Codex, Gemini, Windsurf, Op
 
 Prefer the skills registry? `npx skills add Darcos-Loft/fluid` works too.
 
+On Claude Code, add it as a plugin marketplace instead: `/plugin marketplace add Darcos-Loft/fluid`, then `/plugin install fluid@fluid`.
+
 ## Why fluid
 
 Generic output is not a taste problem, it is a convergence problem. Every model reaches for the same safe defaults, so every site lands in the same place. Fixing it after the fact is slow and never quite works.

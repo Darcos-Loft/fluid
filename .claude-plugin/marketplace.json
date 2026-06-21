@@ -1,0 +1,37 @@
+{
+  "name": "fluid",
+  "owner": {
+    "name": "PLR Studio"
+  },
+  "description": "Anti-generic design, motion, and frontend skills for AI agents. A committed brand identity per brief, a house motion language, and a deterministic anti-slop detector.",
+  "plugins": [
+    {
+      "name": "fluid",
+      "source": "./",
+      "skills": [
+        "./design-system",
+        "./fluid",
+        "./redesign",
+        "./brandkit",
+        "./refine",
+        "./output"
+      ],
+      "description": "6 skills, 108 palettes, 53 styles, 14 layouts, a 22-rule detector, and one house motion language. The opposite of generic AI slop.",
+      "author": {
+        "name": "PLR Studio"
+      },
+      "homepage": "https://fluid.plrstudio.fr",
+      "repository": "https://github.com/Darcos-Loft/fluid",
+      "license": "MIT",
+      "keywords": [
+        "design-system",
+        "motion",
+        "ai-agents",
+        "frontend",
+        "anti-slop"
+      ],
+      "category": "design",
+      "strict": false
+    }
+  ]
+}
