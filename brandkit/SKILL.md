@@ -1,6 +1,6 @@
 ---
 name: brandkit
-description: Generate premium brand reference images for a design system: logo concepts, color and type boards, and product mockups. Use when a brief needs visual references or a brand kit before or alongside building the UI. Tool-agnostic (works with Nano Banana / Gemini, Higgsfield, Midjourney, or any image model).
+description: Generate premium brand reference images for a design system, covering logo concepts, color and type boards, and product mockups. Use when a brief needs visual references or a brand kit before or alongside building the UI. Tool-agnostic (works with Nano Banana / Gemini, Higgsfield, Midjourney, or any image model).
 license: MIT
 ---
 
