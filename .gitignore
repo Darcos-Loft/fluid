@@ -4,3 +4,7 @@ Thumbs.db
 *.log
 .env
 .env.*
+
+# Private dev tooling — the autoresearch loop that improves the detector.
+# Stays local: publishing the eval corpus + internals would let anyone game the detector.
+eval/
