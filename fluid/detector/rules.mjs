@@ -68,6 +68,25 @@ export const rules = [
     message: "A cubic-bezier with a negative control point is the dated back/anticipate bounce. Prefer a real spring or the house --spring.",
     hint: "--spring: cubic-bezier(.34, 1.4, .5, 1); or a framer spring (damping, stiffness).",
   },
+  {
+    id: "bouncy-spring",
+    severity: "info",
+    files: CODE,
+    scan: (content) => {
+      const out = [];
+      const re = /damping:\s*(\d+(?:\.\d+)?)/gi;
+      let m;
+      while ((m = re.exec(content))) {
+        const d = parseFloat(m[1]);
+        if (d > 10) continue;
+        const w = content.slice(Math.max(0, m.index - 90), m.index + 90);
+        if (/stiffness:|useSpring|type:\s*["']?spring/i.test(w)) out.push({ index: m.index, message: `A spring with damping ${d} wobbles before settling, the dated bounce. Raise damping (~18+) for UI motion.` });
+      }
+      return out;
+    },
+    message: "Low spring damping makes elements wobble before settling, the dated bounce. Raise damping for UI motion.",
+    hint: "Critically damped UI springs sit around stiffness 120, damping 20. Overshoot is a slight lean, never a wobble.",
+  },
 
   // ---------- GENERIC LOOK (the anti-generic core) ----------
   {
@@ -106,8 +125,8 @@ export const rules = [
     id: "template-signature",
     severity: "info",
     files: CODE,
-    pattern: /\b(?:BackgroundBeams|BorderBeam|border-beam|animate-aurora|animate-shimmer|text-shimmer|Meteors|TracingBeam|HeroHighlight|GlowingStars|bg-grid-|bg-dot-)\b/g,
-    message: "Recognisable Aceternity/Magic UI/21st template component. Re-skin with your tokens and motion, do not ship verbatim.",
+    pattern: /\b(?:BackgroundBeams|BorderBeam|border-beam|animate-aurora|animate-shimmer|text-shimmer|Meteors|TracingBeam|HeroHighlight|GlowingStars|bg-grid-|bg-dot-|BorderTrail|border-trail|GlowEffect|glow-effect|SpinningText|spinning-text|TextShimmerWave|text-shimmer-wave|ProgressiveBlur|progressive-blur)\b/g,
+    message: "Recognisable template component from a motion or UI library (Aceternity, Magic UI, 21st, motion-primitives). Re-skin with your tokens and motion, do not ship verbatim.",
     hint: "Keep the structure, replace the look (color, type, easing) with your design system.",
   },
   {

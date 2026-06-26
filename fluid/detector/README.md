@@ -17,7 +17,7 @@ Works with `bun detect.mjs` as well, and through the CLI as `npx fluid-skills de
 
 ## Architecture
 
-- `rules.mjs`, the 23 rules (zero dependency): 22 regex rules plus a project-level `prefers-reduced-motion` check. The seed of the house ruleset.
+- `rules.mjs`, the 24 rules (zero dependency): 23 in the main array plus a project-level `prefers-reduced-motion` check. The seed of the house ruleset.
 - `core.mjs`, the importable scan engine shared by `detect.mjs` and the CLI.
 - `deep.mjs`, the optional Tier 3 pass: 6 DOM-aware rules over jsdom (heading order, multiple `h1`, nested cards, icon-tile grids, line length, best-effort contrast). Loaded only with `--deep`, so the core never imports jsdom. jsdom does no layout, so structural rules are exact and contrast is best-effort (literal colors only).
 

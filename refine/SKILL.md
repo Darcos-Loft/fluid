@@ -54,7 +54,7 @@ Register
 - **productward** — push toward task-led product UI (a dashboard): denser, calmer, faster, information-first.
 
 Gates
-- **audit** — run the deterministic detector (23 rules) and report.
+- **audit** — run the deterministic detector (24 rules) and report.
 - **critique** — qualitative review against the by-hand catalog (the structural and semantic tells the detector cannot see).
 - **harden** — accessibility and robustness: reduced-motion in CSS and JS, visible focus, contrast, color-scheme.
 - **polish** — the final craft micro-pass: press and hover feedback, optical alignment, consistent radii and spacing, the details that separate a demo from a shipped build.

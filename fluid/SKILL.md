@@ -65,7 +65,7 @@ Accessibility (non negotiable)
 
 1. Decide if it should move at all (section above). If not, stop.
 2. Pick the smallest tool: a CSS transition for a hover or press, a scroll-linked reveal for sections, a spring for anything gesture-driven or physical.
-3. Reach for a component below before writing new motion.
+3. Reach for a component below before writing new motion. When you do write new motion, follow the recipes in `reference/motion-craft.md`.
 4. Set easing and duration from the rules. transform and opacity only.
 5. Add the reduced-motion path in the same change, not later.
 6. Review against `reference/anti-patterns.md` before calling it done.
@@ -96,5 +96,6 @@ It flags the motion smells above (`transition: all`, layout animation, `ease-in`
 ## Reference (load when needed)
 
 - `reference/easings-and-durations.md`: the full easing map, custom curves, duration table.
+- `reference/motion-craft.md`: implementation recipes (text blur reveal, pointer physics, number roll, spring discipline, stagger), all reduced-motion safe. Read this when you write new motion.
 - `reference/principles.md`: the motion principles behind the rules, condensed.
 - `reference/anti-patterns.md`: the review checklist. Seed of a future deterministic detector.

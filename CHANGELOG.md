@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.2 (2026-06-26)
+- detector: two more tells bring it to 24 rules. `bouncy-spring` flags low-damping springs (the dated bounce that generic libraries ship as bounce/swing presets). `template-signature` now also catches motion-primitives signature components (BorderTrail, GlowEffect, SpinningText, ProgressiveBlur, and more) shipped verbatim.
+- fluid: new `reference/motion-craft.md`, implementation recipes (text blur reveal, pointer physics, number roll, spring discipline), all reduced-motion safe.
+
 ## 0.3.1 (2026-06-22)
 - detector: two new tells bring it to 23 rules. `glassmorphism-blur` flags the frosted-glass `backdrop-filter: blur()` look (and the Tailwind `backdrop-blur` utilities), the canonical recent AI tell. `gradient-text` now also catches the Tailwind `bg-clip-text` utility, not only the CSS `background-clip: text`.
 

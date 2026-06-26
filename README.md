@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <b>6 skills, 108 palettes, 53 styles, 14 layouts, a 23-rule detector, and one house motion language.</b><br>
+  <b>6 skills, 108 palettes, 53 styles, 14 layouts, a 24-rule detector, and one house motion language.</b><br>
   Agent skills that build distinctive, production-grade web interfaces, the opposite of generic AI slop.
 </p>
 
@@ -18,7 +18,7 @@
 <p align="center">
   <img alt="6 skills" src="https://img.shields.io/badge/skills-6-7aa2ff?style=for-the-badge">
   <img alt="Database: 108 palettes" src="https://img.shields.io/badge/database-108_palettes-5ad1c8?style=for-the-badge">
-  <img alt="Detector: 23 rules" src="https://img.shields.io/badge/detector-23_rules-7aa2ff?style=for-the-badge">
+  <img alt="Detector: 24 rules" src="https://img.shields.io/badge/detector-24_rules-7aa2ff?style=for-the-badge">
   <img alt="License: MIT" src="https://img.shields.io/github/license/Darcos-Loft/fluid?style=for-the-badge&color=5ad1c8">
 </p>
 
@@ -61,7 +61,7 @@ Generic output is not a taste problem, it is a convergence problem. Every model 
 
 - **The family grew to six skills.** `redesign`, `brandkit`, `refine` (a vocabulary of 20 named moves), and `output` join `fluid` and `design-system`.
 - **The database doubled.** 108 palettes, 57 type pairings, 53 style directions, plus two new libraries the `init` commits to: 14 page-layout archetypes and 10 build stacks, so generated pages vary their *shape*, not just their palette.
-- **The detector reached 23 rules.** New layout, look, and glassmorphism tells (numbered section markers, the hero eyebrow chip, oversized type, frosted-glass backdrop-blur) on top of the motion and generic-font checks.
+- **The detector reached 24 rules.** New layout, look, and glassmorphism tells (numbered section markers, the hero eyebrow chip, oversized type, frosted-glass backdrop-blur) on top of the motion and generic-font checks.
 
 See the full [changelog](./CHANGELOG.md).
 
@@ -102,10 +102,10 @@ npx fluid-skills detect <path> --strict  # exit 1 on warnings (CI)
 npx fluid-skills detect <path> --json    # machine output
 ```
 
-**23 rules**, zero dependencies, across two families:
+**24 rules**, zero dependencies, across two families:
 
-- **Motion smells:** `transition: all`, animating layout properties, `ease-in` on enters, `scale(0)`, long durations, dated bounce eases, plus a project-level check for a missing `prefers-reduced-motion` path.
-- **Generic-look tells:** Inter/Roboto/Arial as a primary font, the cliche purple gradient, pure black, emoji used as icons, template components (Aceternity/Magic UI/21st) shipped verbatim, Space Grotesk overuse, gradient text, frosted-glass backdrop-blur, justified body, tiny text, em-dash typography, crushed tracking, marketing buzzwords, numbered section markers, the hero eyebrow chip, oversized type.
+- **Motion smells:** `transition: all`, animating layout properties, `ease-in` on enters, `scale(0)`, long durations, dated bounce eases, low-damping springs, plus a project-level check for a missing `prefers-reduced-motion` path.
+- **Generic-look tells:** Inter/Roboto/Arial as a primary font, the cliche purple gradient, pure black, emoji used as icons, template components (Aceternity/Magic UI/21st/motion-primitives) shipped verbatim, Space Grotesk overuse, gradient text, frosted-glass backdrop-blur, justified body, tiny text, em-dash typography, crushed tracking, marketing buzzwords, numbered section markers, the hero eyebrow chip, oversized type.
 
 **`--deep` adds 6 DOM-aware rules** the regex pass cannot see (via jsdom, opt-in so the core stays dependency-free): heading-order skips, multiple `h1`, cards nested in cards, repeated icon-tile feature grids, unbounded line length, and a best-effort contrast check on literal colors.
 
