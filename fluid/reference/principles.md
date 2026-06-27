@@ -36,6 +36,14 @@ Developing taste: surround yourself with great work, rationalize why something w
 
 It all points one way: motion is a tool, not a flourish. Decide if it should move first. When it moves, make it fast, responsive, physical, interruptible, spatially honest, and always with a reduced-motion path. Ration the brand: a 2px gradient hairline beats a full-screen light show.
 
+## Across a suite (more than one page)
+
+Build one page and the risk is too little motion. Build ten and the risk inverts: the same motion on all of them. Generated suites converge, and motion converges hardest, because the same premium kit gets pasted onto every page. The set, repeated, reads as a template even when each effect passes every per-page rule.
+
+The quartet that signals "AI premium" right now: cards that tilt toward the cursor, buttons that stick to it, numbers that count up, a spotlight glow that trails the pointer. None is wrong on its own (fluid ships the pointer and counter recipes). Wrong is shipping all four on every page. Used once, deliberately, a single one is a signature; used everywhere, the four together are wallpaper.
+
+The rule: no two pages alike. Give each page one signature interaction and make it on theme, something that dramatizes what the page is actually about. A deploy view earns a pipeline that fills, a fundraiser earns a funding meter, a course earns a chart that draws itself. That beats a generic stat count-up every time, because it carries meaning, not just motion. Vary the display face the same way: one headline font per page, no shared default.
+
 ## Interaction craft (from production)
 
 Hard-won on real builds, the kind of detail that separates a polished app from a janky one:

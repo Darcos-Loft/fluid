@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.3 (2026-06-27)
+- detector: a new tell brings it to 25 rules. `overused-display-font` flags Geist and Plus Jakarta Sans set as a primary face, the display fonts generated landings converge on, a sibling to the existing Space Grotesk rule. It leaves `Geist Mono` alone.
+- fluid: the lesson from reworking a multi-page demo suite, folded back in. A new "across a suite" section in `reference/principles.md` and `reference/anti-patterns.md`: built at scale, motion converges hardest, the same premium kit (tilt-to-cursor cards, magnetic buttons, count-up numbers, a cursor spotlight) pasted onto every page reads as a template even when each effect passes the per-page rules. The fix: one signature interaction per page, on theme, and a different display face per page.
+- fluid: `reference/motion-craft.md` gains the self-drawing SVG recipe, the path draw via `stroke-dashoffset`, reduced-motion safe.
+
 ## 0.3.2 (2026-06-26)
 - detector: two more tells bring it to 24 rules. `bouncy-spring` flags low-damping springs (the dated bounce that generic libraries ship as bounce/swing presets). `template-signature` now also catches motion-primitives signature components (BorderTrail, GlowEffect, SpinningText, ProgressiveBlur, and more) shipped verbatim.
 - fluid: new `reference/motion-craft.md`, implementation recipes (text blur reveal, pointer physics, number roll, spring discipline), all reduced-motion safe.

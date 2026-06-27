@@ -138,7 +138,7 @@ Severity vocabulary matches the detector: a fix the command must make, versus a 
 
 ### audit
 **Does.** Run the deterministic guardrail.
-**Changes.** Nothing. Runs `node fluid/detector/detect.mjs <path>` (add `--strict` for CI, `--json` for machine output) and reports the 24 rules' findings by severity.
+**Changes.** Nothing. Runs `node fluid/detector/detect.mjs <path>` (add `--strict` for CI, `--json` for machine output) and reports the 25 rules' findings by severity.
 **Enforces.** All detector rules.
 **Leaves alone.** Everything. This is read-only. Fixes come from the named commands the findings point to.
 

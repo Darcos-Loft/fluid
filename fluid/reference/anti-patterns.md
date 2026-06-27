@@ -32,6 +32,7 @@ Review motion against this before shipping. Each item is a candidate for a futur
 ## Taste
 - [ ] Brand color or gradient used at full strength where a rationed accent (a thin hairline, a soft tint) would read as more premium.
 - [ ] Many small animations firing at once with no shared physics personality. Feed them one scroll velocity and progress source.
+- [ ] A generic stat count-up used as the page's signature motion. Prefer a progress indicator tied to what the page actually does (a deploy bar, a funding meter, a completion ring).
 
 ## Interaction (from production)
 - [ ] A modal panel nested inside a fading backdrop, so it fades while sliding (reads as a flash). Separate the layers: dimmer fades, panel slides opaque.
@@ -68,3 +69,8 @@ Copy
 
 Register
 - [ ] A landing page and a dashboard treated the same. Brand work (impression-led) and product UI (task-led) play by different rules.
+
+Across a suite (more than one page)
+- [ ] The same motion kit on every page: tilt-to-cursor cards, magnetic buttons, count-up numbers, a cursor-spotlight glow. Each passes the per-page checks; the repeated set reads as a template. Vary the signature per page.
+- [ ] Every page sharing one display font. Give each its own headline face.
+- [ ] No page carrying a signature interaction on theme. One per page, dramatizing what that page is about, not a kit pasted across all of them.

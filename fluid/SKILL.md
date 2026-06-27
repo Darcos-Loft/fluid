@@ -91,7 +91,7 @@ node detector/detect.mjs --json src   # for CI
 node detector/detect.mjs --strict src # exit 1 on warnings too
 ```
 
-It flags the motion smells above (`transition: all`, layout animation, `ease-in`, `scale(0)`, long durations, dated bounce, missing reduced-motion) and the generic-look tells (Inter/Roboto/Arial as a primary font, the purple gradient, pure black, emoji icons, Aceternity/Magic UI/21st template signatures shipped verbatim, Space Grotesk). Suppress a line with `fluid-disable-line`, configure via `fluid.config.json`. Rules live in `detector/rules.mjs`, extend them as the house ruleset grows. Run it before calling any UI change done.
+It flags the motion smells above (`transition: all`, layout animation, `ease-in`, `scale(0)`, long durations, dated bounce, missing reduced-motion) and the generic-look tells (Inter/Roboto/Arial as a primary font, the purple gradient, pure black, emoji icons, Aceternity/Magic UI/21st template signatures shipped verbatim, and the display fonts generations converge on: Space Grotesk, Geist, Plus Jakarta Sans). Suppress a line with `fluid-disable-line`, configure via `fluid.config.json`. Rules live in `detector/rules.mjs`, extend them as the house ruleset grows. Run it before calling any UI change done.
 
 ## Reference (load when needed)
 

@@ -138,6 +138,14 @@ export const rules = [
     hint: "Pick a heading font with more specific character.",
   },
   {
+    id: "overused-display-font",
+    severity: "info",
+    files: CODE,
+    pattern: /(?:font-family\s*:|fontFamily\s*[:=])\s*\[?\s*["']?(?:Geist\b(?!\s+Mono)|Plus\s+Jakarta(?:\s+Sans)?)\b/gi,
+    message: "Geist and Plus Jakarta Sans are display faces AI generations converge on. Vary the headline font to stay distinctive, and rotate it across a multi-page suite.",
+    hint: "Pick a heading font with more specific character; do not reuse one default across every page.",
+  },
+  {
     id: "gradient-text",
     severity: "info",
     files: CODE,

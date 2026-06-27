@@ -108,9 +108,24 @@ const itemReveal = {
 
 Stagger 0.06 to 0.10s for a handful of items, tighter for many. Fire once on scroll in (see `Reveal`). Never start a child from `scale(0)`, start near `0.96`.
 
+## 6. Self-drawing SVG (the path draw)
+
+A stroke that draws itself reads as craft and costs almost nothing. Set the dash array to the path length and animate the offset to zero. Use `pathLength="1"` so the maths is unit-free: the same code drives a ring, an underline, a signature, or a chart curve.
+
+```html
+<path pathLength="1" class="draw" d="..." />
+```
+
+```css
+.draw   { stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset 1.2s var(--out); }
+.draw.in { stroke-dashoffset: 0; }   /* add .in once, on scroll into view */
+```
+
+`stroke-dashoffset` is a presentation attribute, not a layout property, so it animates without reflow. Drive `.in` from an `IntersectionObserver` and fire once. For a live progress meter, set the offset from a value (`1 - pct`) instead of a transition. Reduced motion: skip the transition and render the stroke full (`stroke-dashoffset: 0`), never leave it half drawn.
+
 ## Non negotiables (every recipe)
 
-- `transform`, `opacity`, `filter` only. Never animate width, height, top, margin, padding.
+- `transform`, `opacity`, `filter` only (plus `stroke-dashoffset` for the path draw, also non-layout). Never animate width, height, top, margin, padding.
 - The `prefers-reduced-motion` path ships in the same change, not later. Disable pointer and scroll inertia, snap counters, render text plain, freeze ambient canvases.
 - Stagger is calibrated to the unit, not a flat number.
 - Restraint over bounce. Lower the intensity, tilt, and overshoot below the generic defaults.
